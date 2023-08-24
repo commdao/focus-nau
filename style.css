@@ -1,0 +1,167 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: #F58024;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    filter: drop-shadow(8px 8px rgba(0, 0, 0, 0.813));
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon-rows {
+    height: 3rem;
+}
+
+select option:hover {
+    background-color: #51b046;
+}
+
+select {
+    padding: 0.25rem 1rem;
+    appearance: none;
+    z-index: 2;
+}
+
+.tasks {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    width: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.693));
+    z-index: 2;
+}
+
+#reset-icons-button {
+    color: white;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.banner-text {
+    position: absolute;
+    z-index: -3;
+    font-size: 13rem;
+    opacity: .6;
+}
+
+.time-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    z-index: 2;
+}
+
+input[type] {
+    text-align: center;
+    width: 3rem;
+}
+
+#remaining-time-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.5rem;
+    width: 20rem;
+    font-size: 4.5rem;
+    border: 6px solid white;
+    user-select: none;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.times-up {
+    font-size: 3.15rem !important;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+button {
+    width: 9.375rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: #642a92;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: darkpurple;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.business-mode {
+    background-color: #51b046;
+}
+
+.pleasure-mode {
+    background-color: #994FB2;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}

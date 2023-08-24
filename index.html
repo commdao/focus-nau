@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <h1>フォーカス・なう</h1>
+    <p>Focus Nau</p>
+
+    <div class="banner-text" id="banner-text"></div>
+
+    <div class="container">    
+        <select name="task-type" id="task-type">
+            <option value="business" selected>Business</option>
+            <option value="pleasure">Pleasure</option>
+        </select>
+        <i class="fa-solid fa-rotate-right fa-xl" id="reset-icons-button"></i>
+    </div> 
+
+    <div class="icon-rows">
+        <div class="tasks business" id="businessTasks">
+            <i class="fa-solid fa-business-time fa-xl" data-task="BUSINESS"></i>
+            <i class="fa-solid fa-book fa-xl" data-task="STUDY"></i>
+            <i class="fa-solid fa-dumbbell fa-xl" data-task="EXERCISE"></i>
+            <i class="fa-solid fa-pen fa-xl" data-task="WRITING"></i>
+        </div>
+        
+        <div class="tasks pleasure" id="pleasureTasks">
+            <i class="fa-solid fa-gamepad fa-xl" data-task="GAMING"></i>
+            <i class="fa-solid fa-guitar fa-xl" data-task="PRACTICE"></i>
+            <i class="fa-brands fa-youtube fa-xl" data-task="OTHER"></i>
+        </div>
+    </div>
+    
+        <div class="time-inputs">
+            <input type="number" id="hoursInput" min="0" max="999" step="1" placeholder="0">
+            <label for="hoursInput">Hours</label>
+            
+            <input type="number" id="minutesInput" min="0" max="59" step="1" placeholder="0">
+            <label for="minutesInput">Minutes</label>
+        </div>
+    
+    <div id="remaining-time-display">00:00:00</div>
+    <div class="controls">
+        <div class="column">
+            <button id="startButton">Start</button>
+            <button id="addTimeButton">+5 Min</button>
+        </div>
+        <div class="column">
+            <button id="resetButton">Reset</button>    
+            <button id="subtractTimeButton">-5 Min</button>
+        </div>
+    </div>
+        <script src="icons.js"></script>
+        <script src="buttons.js"></script>
+</body>
+</html>
