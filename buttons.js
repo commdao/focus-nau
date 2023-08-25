@@ -11,6 +11,14 @@ let intervalId;
 let totalTimeInSeconds = 0;
 
 startButton.addEventListener('click', () => {
+    const hours = parseInt(document.getElementById('hoursInput').value) || 0;
+    const minutes = parseInt(document.getElementById('minutesInput').value) || 0;
+
+    if (hours === 0 && minutes === 0) {
+        alert("Oi! Don't forget to set the time!");
+        return;
+    }
+
     if (!isRunning) {
         startTimer();
         isRunning = true;
