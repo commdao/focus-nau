@@ -112,6 +112,18 @@ function hideOtherIcons(iconContainer, excludedTask) {
 
 const resetIcons = document.getElementById('reset-icons-button');
 resetIcons.addEventListener('click', () => {
-        location.reload();
-})
+    restoreIconPositions();
+});
+
+function restoreIconPositions() {
+    const taskType = taskTypeSelect.value;
+    const iconsToDisplay = document.querySelectorAll(`.tasks.${taskType} i`);
+    
+    iconsToDisplay.forEach(icon => {
+        icon.style.display = 'flex';
+    });
+
+    const bannerText = document.getElementById('banner-text');
+    bannerText.textContent = '';
+}
 
