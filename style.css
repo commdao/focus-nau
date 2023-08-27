@@ -22,7 +22,11 @@ body {
 h1 {
     margin-top: 2rem;
     font-size: 3rem;
-    filter: drop-shadow(8px 8px rgba(0, 0, 0, 0.813));
+    filter: drop-shadow(6px 9px rgba(0, 0, 0, 0.813));
+}
+
+p {
+    text-align: center;
 }
 
 .container {
@@ -39,6 +43,8 @@ h1 {
 
 .icon-rows {
     height: 3rem;
+    display: flex;
+    justify-content: center;
 }
 
 select option:hover {
@@ -62,7 +68,7 @@ select {
     padding: 1rem;
     margin-bottom: 1rem;
     color: white;
-    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.693));
+    filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.693));
     z-index: 2;
 }
 
@@ -76,12 +82,17 @@ select {
     position: absolute;
     z-index: -3;
     font-size: 13rem;
+    display: flex;
+    justify-content: center; /*not working as intended*/
+    align-content: center;
+    text-align: center;
     opacity: .6;
 }
 
 .time-inputs {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -99,12 +110,12 @@ input[type] {
     justify-content: center;
     align-items: center;
     height: 6.5rem;
-    width: 20rem;
+    /* width: 20rem; */
     font-size: 4.5rem;
     border: 6px solid white;
     user-select: none;
     margin-bottom: 1rem;
-    padding: 1rem;
+    padding: 1rem 0;
     z-index: 2;
 }
 
@@ -165,3 +176,4 @@ button:active {
 .shake {
     animation: shake 0.5s;
 }
+
