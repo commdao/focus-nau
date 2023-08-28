@@ -110,12 +110,11 @@ input[type] {
     justify-content: center;
     align-items: center;
     height: 6.5rem;
-    /* width: 20rem; */
     font-size: 4.5rem;
     border: 6px solid white;
     user-select: none;
     margin-bottom: 1rem;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     z-index: 2;
 }
 
