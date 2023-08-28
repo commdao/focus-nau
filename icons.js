@@ -121,6 +121,7 @@ function restoreIconPositions() {
     
     iconsToDisplay.forEach(icon => {
         icon.style.display = 'flex';
+        icon.style.transform = 'none';
     });
 
     const bannerText = document.getElementById('banner-text');

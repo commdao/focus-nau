@@ -129,7 +129,7 @@ input[type] {
     align-items: center;
     flex-direction: row;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: .25rem;
 }
 
 .column {
@@ -177,3 +177,26 @@ button:active {
     animation: shake 0.5s;
 }
 
+@media (max-width: 768px) {
+    .mobile {
+        padding: 1rem;
+        height: 50%;
+        width: 50%
+    }
+    h1 {
+        font-size: 2.25rem;
+    }
+    button {
+        padding: 0.5rem .5rem;
+        width: 8rem;
+    }
+    #remaining-time-display {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+    .time-inputs {
+        flex-direction: row;
+        gap: .5rem;
+        margin: 1;
+    }
+}
