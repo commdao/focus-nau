@@ -3,7 +3,7 @@ a focus timer for productivity with a sprinkle of flair
 
 why? I sure as hell need it!
 
-![Preview](https://github.com/commdao/jon-dao-notreact/blob/main/media/preview_focus_timer.png)
+[![Preview](https://github.com/commdao/jon-dao-notreact/blob/main/media/preview_focus_timer.png)](https://www.youtube.com/watch?v=yFM_uthdnIQ)
 
 # what I learned
 too many animations and effects make you look like a bad powerpoint
