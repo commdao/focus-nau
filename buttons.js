@@ -117,8 +117,29 @@ function shakeScreen() {
 }
 
 function addTime(minutesToAdd) {
-    timer += minutesToAdd * 60;
-    updateDisplay();
+    const hoursInput = document.getElementById('hoursInput');
+    const minutesInput = document.getElementById('minutesInput');
+    
+    let hours = parseInt(hoursInput.value) || 0;
+    let minutes = parseInt(minutesInput.value) || 0;
+
+    if (!isRunning) {
+        minutes += minutesToAdd;
+    } else {
+        timer += minutesToAdd * 60;
+        hours = Math.floor(timer / 3600);
+        minutes = Math.floor((timer % 3600) / 60);
+    }
+
+    hours += Math.floor(minutes / 60);
+    minutes %= 60;
+
+    hoursInput.value = hours;
+    minutesInput.value = minutes;
+
+    if(isRunning) {
+        updateDisplay();
+    }
 }
 
 function subtractTime(minutesToSubtract) {
